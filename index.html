@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Code Tribe</title>
+    <link rel = "stylesheet" href = "css/style.css">
+    <body>
+    <head>
+        
+
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <a href="#">
+                        <img src="./Icon/cs.jpg"width="50px" alt="">
+                    </a>
+                </a>
+                    </td>
+                    <td align="right">
+                    <nav  style="margin-right: 50px; 
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                    margin-left: 16px;
+                    position:relative;
+                    
+                    ">
+
+                        <a href="#" style="text-decoration: none; font-family: Arial;">Home</a>
+                        <a href="about_us.html" style="margin: 16px; text-decoration: none; font-family: Arial;">About Us</a>
+                        <a href="contact_us.html" style="text-decoration: none; font-family: Arial;">Contact Us</a>
+                    </nav>
+                </td>
+                </tr>
+            </table>
+            
+        </div>
+   </head>
+<!--Main------------------------------------------->
+
+    
+			<div class ="video-container">
+                <video width="100%" height="100%" controls>
+        <source src="video/save1.mp4" type="video/mp4">
+    
+        </video>
+    </div>
+</table>
+<!--About Section---------------------------------------->
+<table>
+        <tr>
+            <td style="padding-left: 30vh; padding-top: 50px; color: #c90606">
+                <h1>I am Clarence Sithole</h1>
+                <p>I obtained NQF 5 in systems development where i studied. <br>I atteded my studies at Tlou Foundation College. <br>I have the skills in Html5, Css<br> and Javascript with MSSQL, MySQL and PHP.<br>
+                     I also have a skills in C# ,NET and<br> ASP.Net with Guna frameworks and<br><br> Python skills including AI and Microsoft Azure fundamentals.<br>
+                    I gain more skills and knowledge as a Full stack Developer at<br> Tlou Technologies where i develop application such as,<br>
+                HR Systems managementfor HR department <br> and ecommerce websites for our clients </p>
+           </td>
+            <td align style="padding-right: 1.5vh; padding-top: 30px; padding-bottom: 30px;" >
+                <img
+              src="./image/clarence.jpg" alt=""
+                  width="300px" 
+                  height="300px"
+                  style="border-radius: 50%; object-fit: cover; border: 5px solid grey;"
+
+                  />
+                </td>
+            </td>
+        </tr>
+    </table>
+
+ <!--Footer----------------------------------------->
+<footer>
+    <br><br><br><br>
+    <div class="contact-wrap">
+        <div class="contact-in">
+            <h1>Contact Info</h1>
+            <h2><i class="fa fa-phone" aria-hidden="true"></i> Phone</h2>
+            <p>078 491 5122</p>
+            <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+            <p>sitholeclarence9@gmail.com</p>
+            <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+            <p>1442 Tembisa, Johannesburg</p>
+            <ul>
+                <li><a href="https://web.facebook.com/Clarence.s.sithole"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/home"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://accounts.google.com/AccountChooser?Email=sitholeclarence9%40gmail.com&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dchrome-profile-chooser"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/accounts/password/reset/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="contact-in">
+            <h1>Send a Message</h1>
+            <form onsubmit="sendEmail(); reset();return false;"> 
+                <input type id="name" placeholder="Enter Name" class="contact-in-input">
+                <input type id="email" placeholder="Enter Email" class="contact-in-input">
+                <input type id="text"id ="phone" placeholder="Enter Phone Number" class="contact-in-input" required>
+                <textarea id="message" row ="4" placeholder="How Can We Help You?" class="contact-in-textarea"></textarea>
+                <input type="submit"  class="contact-in-btn">
+            </form>
+
+        </div>
+        <div class="contact-in">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57377.58042415083!2d28.212690499999997!3d-25.9975815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e8c82ee355b%3A0x595bf126e85fe158!2sMidrand%20Licencing%20Department!5e0!3m2!1sen!2sza!4v1677063212438!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <br><center>Copyright &copy; 2023 All rights reserved by clarence Inc.</center>
+</footer>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "scsithole1.cs@gmail.com",
+    Password : "EB43F739081BF03FAB8F48284E604337B84D",
+    To : 'scsithole1.cs@gmail.com.com',
+    From : document.getElementById("email").value,
+    Subject : "subject",
+    Body : "Name:"+ document.getElementById("name").value
+     + "<br> Email:" +document.getElementById("email").value
+     + "<br> Phone no:" +document.getElementById("phone").value
+     + "<br> Message:" +document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Successfully")
+);
+    }
+</script>
+</body>
+</html>
